@@ -81,6 +81,8 @@
 <!--                    II-->
 <!--                </div>-->
 <!--            </div>-->
+            <h2 class="options_text">Наши комплексы</h2>
+
             <div class="options-cards">
                 <div class="options-card">
                     <div class="options-card-thumb">
@@ -124,51 +126,67 @@
     
     <div class="flats">
         <div class="flats_wrapper">
-            <div class="flats_title">
+            <h2 class="flats_title">
                 Наши квартиры
-            </div>
+            </h2>
 
             <div class="flats_cards">
                 <div class="flats_card">
-                    <img src="img/flats3.jpg" alt="Flats">
-                    <p class="flats_card_title">Лофт — 1 этажа</p>
+                    <a href="#!">
+                        <img src="img/flats3.jpg" alt="Flats" class="flats_thumb">
+                        <p class="flats_card_title">Лофт — 1 этажа</p>
+                    </a>
                 </div>
                 <div class="flats_card">
-                    <img src="img/flats2.jpg" alt="Flats">
-                    <p class="flats_card_title">Лофт — 2 этажа</p>
+                    <a href="#!">
+                        <img src="img/flats2.jpg" alt="Flats" class="flats_thumb">
+                        <p class="flats_card_title">Лофт — 2 этажа</p>
+                    </a>
                 </div>
                 <div class="flats_card">
-                    <img src="img/flats3.jpg" alt="Flats">
-                    <p class="flats_card_title">Лофт — 3 этажа</p>
+                    <a href="#!">
+                        <img src="img/flats3.jpg" alt="Flats" class="flats_thumb">
+                        <p class="flats_card_title">Лофт — 3 этажа</p>
+                    </a>
                 </div>
                 <div class="flats_card">
-                    <img src="img/flats2.jpg" alt="Flats">
-                    <p class="flats_card_title">Лофт — 4 этажа</p>
+                    <a href="#!">
+                        <img src="img/flats2.jpg" alt="Flats" class="flats_thumb">
+                        <p class="flats_card_title">Лофт — 4 этажа</p>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="forms">
-        <div class="forms_wrapper">
-            <div class="forms_title">
+    <div class="form">
+        <div class="form_wrapper">
+            <h2 class="form_title">
                 Хотите посмотреть?
-            </div>
-            <div class="forms_card">
-                <div class="forms_card_title">
+            </h2>
+            <div class="form_cards">
+                <div class="form_desc">
                     Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
                     Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
                     В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
                     используя Lorem Ipsum для распечатки образцов.
                 </div>
-                <div class="form_card_form">
-                    <input type="text" class="form_card_input card_input" placeholder="Ваше имя" >
-                    <input type="text" class="form_card_input card_input" placeholder="Ваш телефон" >
-                    <p class="form_card_desc">
-                        *Мы никому не передаем ваши данные.
-                        И не сохраняем ваш номер в базу.
-                    </p>
-                    <button type="submit" class="form_card_input_light card_input" placeholder="Посмотреть район">
+                <div class="form_inputs">
+                    <div class="form_input card_input">
+                        <input type="text" id="formName" class="input-card" placeholder="Ваше имя">
+                    </div>
+                    <div class="form_input card_input">
+                        <input type="text" id="formPhone" class="input-card" placeholder="Ваш телефон">
+                    </div>
+                    <div class="form_input_desc">
+                        <p class="inputs_desc">
+                            *Мы никому не передаем ваши данные.
+                            И не сохраняем ваш номер в базу.
+                        </p>
+                    </div>
+                    <div class="form_button">
+                        <button type="submit" class="button-card"> Посмотреть район</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,10 +201,10 @@
     </div>
     <div class="maps">
         <div class="maps_wrapper">
-            <div class="maps_title">
+            <h2 class="maps_title">
                 Район на карте
-            </div>
-            <div class="maps_map">
+            </h2>
+            <div id="map">
 
             </div>
         </div>
@@ -194,20 +212,26 @@
 
     <div class="questions">
         <div class="questions_wrapper">
-            <div class="questions_title">
+            <h2 class="questions_title">
                 Есть вопросы?
-            </div>
+            </h2>
             <div class="questions_cards">
-                <p class="questions_cards_title question">*Мы никому не передаем ваши данные.
-                    И не сохраняем ваш номер в базу.</p>
-                <div class="questions_card" >
-                    <input class="questions_cards_input question" type="text" placeholder="Ваше имя">
+                <div class="form_input_desc">
+                    <p class="inputs_desc">
+                        *Мы никому не передаем ваши данные.
+                        И не сохраняем ваш номер в базу.
+                    </p>
                 </div>
-                <div class="questions_card">
-                    <input class="questions_cards_input question" type="text" placeholder="Ваш телефон">
+                <div class="form_input card_input">
+                    <input type="text" id="questionName" class="input-card" placeholder="Ваше имя">
                 </div>
-                <button class="questions_cards_input_white question" type="submit">
-                    <p class="question-button">Посмотреть район</p> </button>
+                <div class="form_input card_input">
+                    <input type="text" id="questionPhone" class="input-card" placeholder="Ваш телефон">
+                </div>
+                <div class="form_button">
+                    <button type="submit" class="button-card"> Посмотреть район</button>
+                </div>
+
 
             </div>
         </div>
@@ -254,5 +278,20 @@
     </div>
 
 </footer>
+        <script>
+            function initMap() {
+                var uluru = {lat: 55.7242928, lng: 37.577221};
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {
+                        zoom: 12,
+                        center: uluru
+                    });
+                var marker = new google.maps.Marker({position: uluru, map: map});
+            }
+        </script>
+
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjNZUYL19jc9V0wmA1vN2Wz5aeGKQObY0&callback=initMap">
+        </script>
 </body>
 </html>

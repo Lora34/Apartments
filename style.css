@@ -73,6 +73,26 @@ body {
     color: white;
     background:  #242B33;
 }
+
+body::-webkit-scrollbar {
+        width: 25px
+}
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+    /*background-color: #636363;*/
+    background: linear-gradient(to top, #D4C17F, #242B33);
+    border-radius: 15px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #D4C17F, #242B33);
+
+}
+body::-webkit-scrollbar-button {
+    background-color: #D4C17F;
+    border-radius: 15px 0;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -242,6 +262,20 @@ img {
     color: #FFFFFF;
     opacity: 0.02;
 }
+
+.options_text {
+    text-align: start;
+    margin-top: 100px;
+    font-family: Arial, serif;
+    font-size: 80px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+    background: url(https://images-na.ssl-images-amazon.com/images/I/61Wrpmlk6BL._SY450_.jpg) repeat-x;
+    -webkit-background-clip: text;
+    background-size: contain;
+    animation: fire 15s linear infinite;
+}
+
 .flats_wrapper{
     max-width: 1100px;
     margin: 0 auto;
@@ -264,6 +298,13 @@ img {
     position: relative;
     z-index: 2;
     margin-top: 30px;
+    overflow: hidden;
+}
+.flats_thumb {
+    transition: 0.15s;
+}
+.flats_thumb:hover {
+    transform: scale(1.05);
 }
 .flats_card_title{
     position: absolute;
@@ -276,22 +317,15 @@ img {
     transform: translateY(-250%);
     margin-left: 50px;
 }
-.forms {
+.form {
     background: url("img/form.jpg");
 }
-.forms_wrapper{
+.form_wrapper{
     max-width: 1100px;
     margin: 0 auto;
     padding-bottom: 180px;
 }
-.forms_card{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 35px;
-    justify-content: space-between;
-    align-items: center;
-}
-.forms_title{
+.form_title{
     font-weight: bold;
     font-size: 36px;
     line-height: 48px;
@@ -299,7 +333,23 @@ img {
     padding-top: 180px;
     padding-bottom: 30px;
 }
-.form_card_form {
+.form_cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 35px;
+    justify-content: space-between;
+    align-items: center;
+}
+.form_desc{
+    font-family: Raleway, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.form_inputs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
@@ -307,59 +357,62 @@ img {
     justify-content: space-between;
     align-items: center;
 }
-.card_input {
-    margin-right: 30px;
-}
-.card_input:nth-of-type(even) {
-    margin-right: 0;
-}
+/*.card_input {*/
+/*    margin-right: 30px;*/
+/*}*/
+/*.card_input:nth-of-type(even) {*/
+/*    margin-right: 0;*/
+/*}*/
 
-.forms_card_title{
-    padding-top: 20px;
-    min-width: 535px;
+.form_input_desc{
+    /*padding-top: 20px;*/
+    /*min-width: 535px;*/
     font-family: Raleway, serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #FFFFFF;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #E7E7E7;
 
 }
-.form_card_input{
+
+.input-card {
     background: #FFFFFF;
     opacity: 0.2;
-}
-.form_card_input_light {
-    background: #D4C17F;
-    opacity: 0.2;
-}
-.card_input {
     width: 255px;
     height: 50px;
-    padding: 12px auto 12px auto;
-    color: white;
+    padding-left: 95px;
     font-family: Raleway, serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 27px;
 }
-.card_input::placeholder{
-    font-weight: normal;
-    font-size: 14px;
-    color: #fff;
 
+.input-card::placeholder {
+    color: black;
 }
-
-.form_card_desc {
+.button-card {
     width: 255px;
-    height: 28px;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 16px;
+    height: 50px;
+    font-family: Raleway, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 27px;
     text-align: center;
-    color: #E7E7E7;
+    border: none;
+    color: white;
+    background: linear-gradient(-45deg, #636363, #a2ab58);
+    background-size: 400% 200%;
+    animation: gradient 5s ease infinite;
 }
+.button-card:hover {
+    background: linear-gradient(to bottom, #636363, #a2ab58);
+}
+
+/*VIDEO*/
 
 .video{
     width: 100%;
@@ -382,6 +435,10 @@ img {
     margin-bottom: 180px;
 }
 
+#map {
+    width: 1100px;
+    height: 358px;
+}
 .maps_wrapper {
     max-width: 1100px;
     margin: 0 auto;
@@ -412,57 +469,10 @@ img {
     grid-template-columns: repeat(4, 1fr);
     padding-bottom: 190px;
 }
-.questions_cards_title {
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 16px;
-    /* or 123% */
-    text-align: center;
-    color: #E7E7E7;
 
-}
-.questions_card{
-    background: #FFFFFF;
-    opacity: 0.2;
-    width: 255px;
-    height: 50px;
-    font-family: Raleway, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 27px;
 
-}
-.questions_cards_input {
-    padding-right: 50px;
-    font-family: Raleway, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 27px;
-    color: #fff;
-    border: none;
-}
 
-.questions_cards_input::placeholder {
-    font-family: Raleway, serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 27px;
-    color: #fff;
-    text-align: center;
 
-}
-.questions_cards_input_white {
-    background: #D4C17F;
-    opacity: 0.2;
-    color: white;
-}
-.question-button {
-    opacity: 1;
-    color: white;
-}
 footer {
     background: #2D343C;
 }
@@ -498,4 +508,28 @@ footer {
 }
 .about_li:last-child {
     padding-bottom: 0;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+@keyframes fire {
+    0% {
+        background-position: left 0 top 25px;
+    }
+    50% {
+        background-position: left 130px top -35px;
+    }
+    100% {
+        background-position: left 260px top 0;
+    }
+    
 }
