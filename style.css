@@ -106,6 +106,10 @@ img {
     width: 100%;
     z-index: 100;
 }
+.header_active {
+    background-color: #242B33;
+
+}
 .wrapper {
     width: 1100px;
     margin: 0 auto;
@@ -184,17 +188,17 @@ img {
     font-size: 48px;
     line-height: 64px;
     color: #D4C17F;
+    margin-bottom: 100px;
 }
 .intro-pic {
-    margin-top: 100px;
+    margin-bottom: 200px;
 }
 
 .intro-contacts{
-    margin-top: 200px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /*column-gap: 90px;*/
-    justify-content: spaform_card_inputce-between;
+    justify-content: space-between;
     align-items: center;
 }
 .intro-contacts-place, .intro-contacts-number {
@@ -222,19 +226,20 @@ img {
 }
 .options-wrapper {
     max-width: 782px;
-    margin: 0 auto;
+    margin: 0  auto 120px auto;
     position: relative;
+    /*margin-bottom: 120px;*/
 }
 .options-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
     padding-top: 120px;
-    padding-bottom: 120px;
+    /*padding-bottom: 120px;*/
 }
 .options-card {
+    grid-column: span 1;
     text-align: center;
 }
 .options-card-title {
@@ -276,6 +281,7 @@ img {
     animation: fire 15s linear infinite;
 }
 
+
 .flats_wrapper{
     max-width: 1100px;
     margin: 0 auto;
@@ -291,13 +297,14 @@ img {
 .flats_cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
     justify-content: space-between;
     align-items: center;
 }
+
 .flats_card{
     position: relative;
     z-index: 2;
-    margin-top: 30px;
     overflow: hidden;
 }
 .flats_thumb {
@@ -317,13 +324,14 @@ img {
     transform: translateY(-250%);
     margin-left: 50px;
 }
+
 .form {
     background: url("img/form.jpg");
 }
 .form_wrapper{
     max-width: 1100px;
     margin: 0 auto;
-    padding-bottom: 180px;
+    /*padding-bottom: 180px;*/
 }
 .form_title{
     font-weight: bold;
@@ -331,7 +339,7 @@ img {
     line-height: 48px;
     color: #D4C17F;
     padding-top: 180px;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 .form_cards{
     display: grid;
@@ -339,6 +347,7 @@ img {
     column-gap: 35px;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 180px;
 }
 .form_desc{
     font-family: Raleway, serif;
@@ -374,7 +383,6 @@ img {
     line-height: 16px;
     text-align: center;
     color: #E7E7E7;
-
 }
 
 .input-card {
@@ -443,6 +451,7 @@ img {
     max-width: 1100px;
     margin: 0 auto;
     padding-top: 180px;
+    padding-bottom: 180px;
 }
 
 .maps_title {
@@ -455,7 +464,6 @@ img {
 .questions_wrapper {
     max-width: 1100px;
     margin: 0 auto;
-    padding-top: 180px;
 }
 .questions_title {
     font-weight: bold;
@@ -467,7 +475,8 @@ img {
 .questions_cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding-bottom: 190px;
+    column-gap: 30px;
+    margin-bottom: 190px;
 }
 
 
@@ -477,22 +486,19 @@ footer {
     background: #2D343C;
 }
 .footer_wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: start;
     padding-top: 72px;
     padding-bottom: 60px;
 }
 
 .about {
-    display: flex;
-  flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
 }
+
 .about_item {
-    margin-right: 166px;
+    /*margin-right: 166px;*/
     font-family: Raleway, serif;
     font-style: normal;
     font-weight: normal;
@@ -533,3 +539,134 @@ footer {
     }
     
 }
+
+
+@media screen and (max-width: 1024px) {
+   body {
+        padding: 0 15px;
+    }
+   .header_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+    }
+    .flats_cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 40px;
+        row-gap: 30px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0  25% 180px 25%;
+    }
+
+    .questions_cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 50px;
+        row-gap: 50px;
+        padding-bottom: 190px;
+        margin: 0 20%;
+    }
+    .inputs_desc {
+        width: 255px;
+    }
+    .form_cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 35px;
+        row-gap: 50px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0  20% 180px 20%;
+    }
+    .form_desc{
+        text-align: center;
+    }
+    .form_title{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 48px;
+        color: #D4C17F;
+        padding-top: 180px;
+        margin-bottom: 60px;
+    }
+
+    /*#map {*/
+    /*    width: 995px;*/
+    /*}*/
+
+    #map {
+        width: 99.5%;
+    }
+
+    footer {
+        padding: 0 100px;
+        /*display: none;*/
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 50px;
+        justify-content: center;
+        align-items: start;
+    }
+}
+@media screen and (max-width: 768px) {
+    #map {
+        width: 98%;
+    }
+    .questions_cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+    .questions_title {
+        width: 155px;
+    }
+}
+@media screen and (max-width: 414px) {
+    #map {
+        width: 98%;
+    }
+    .questions_cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+    .questions_title {
+        width: 155px;
+    }
+
+    .options-cards {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 120px;
+    }
+
+    .options-card {
+        /*grid-column: span 2;*/
+        text-align: center;
+    }
+    .flats_cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 0;
+        row-gap: 30px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 180px;
+    }
+    .flats_card{
+        width: 100%;
+    }
+
+}
+

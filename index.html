@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Жилой комплекс HOUSE VOP</title>
+<!--для CEO-->
+    <meta name="description" content="" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#242b33">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#242b33">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#242b33">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,16 +35,16 @@
                         <a href="#intro" class="header_link js-scroll">О комплексе</a>
                     </li>
                     <li class="header_item">
-                        <a href="#benefits" class="header_link js-scroll">Район</a>
+                        <a href="#options" class="header_link js-scroll">Район</a>
                     </li>
                     <li class="header_item">
-                        <a href="#directions" class="header_link js-scroll">Каталог квартир</a>
+                        <a href="#flats" class="header_link js-scroll">Каталог квартир</a>
                     </li>
                     <li class="header_item">
-                        <a href="#projects" class="header_link js-scroll">Ипотека</a>
+                        <a href="#video" class="header_link js-scroll">Видео</a>
                     </li>
                     <li class="header_item">
-                        <a href="#footer" class="header_link js-scroll">Контакты</a>
+                        <a href="#form" class="header_link js-scroll">Контакты</a>
                     </li>
                 </ul>
 
@@ -53,7 +64,7 @@
 
 </header>
 <main>
-    <div class="intro">
+    <div class="intro" id="intro">
         <div class="intro-wrapper">
             <h1 class="intro-title">
                 Жилой комплекс в историческом центре
@@ -74,7 +85,7 @@
             </div>
         </div>
     </div>
-    <div class="options">
+    <div class="options" id="options">
         <div class="options-wrapper">
 <!--            <div class="option-background">-->
 <!--                <div class="option-background-title">-->
@@ -124,7 +135,7 @@
         </div>
     </div>
     
-    <div class="flats">
+    <div class="flats" id="flats">
         <div class="flats_wrapper">
             <h2 class="flats_title">
                 Наши квартиры
@@ -159,7 +170,7 @@
         </div>
     </div>
 
-    <div class="form">
+    <div class="form" id="form">
         <div class="form_wrapper">
             <h2 class="form_title">
                 Хотите посмотреть?
@@ -192,13 +203,14 @@
         </div>
     </div>
 
-    <div class="video">
+    <div class="video" id="video">
         <div class="video_wrapper">
             <div class="video_item">
                 <iframe class="video_elem" src="https://www.youtube.com/embed/Y8Q9ptCXzL0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>
+
     <div class="maps">
         <div class="maps_wrapper">
             <h2 class="maps_title">
@@ -241,16 +253,17 @@
 <footer>
     <div class="wrapper">
         <div class="footer_wrapper">
-            <div class="header-logo">
-                <a href="#!" class="header-logo-title">
-                    HouseVOP
-                </a>
-                <div class="header-logo-subtitle">
-                    ЖИЛОЙ КОМПЛЕКС
-                </div>
-            </div>
+
 
             <div class="about">
+                <div class="header-logo">
+                    <a href="#!" class="header-logo-title">
+                        HouseVOP
+                    </a>
+                    <div class="header-logo-subtitle">
+                        ЖИЛОЙ КОМПЛЕКС
+                    </div>
+                </div>
                 <ul class="about_item">
                     <li class="about_li">О комплексе</li>
                     <li class="about_li">Район</li>
@@ -278,18 +291,7 @@
     </div>
 
 </footer>
-        <script>
-            function initMap() {
-                var uluru = {lat: 55.7242928, lng: 37.577221};
-                var map = new google.maps.Map(
-                    document.getElementById('map'), {
-                        zoom: 12,
-                        center: uluru
-                    });
-                var marker = new google.maps.Marker({position: uluru, map: map});
-            }
-        </script>
-
+        <script src="main.js"></script>
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjNZUYL19jc9V0wmA1vN2Wz5aeGKQObY0&callback=initMap">
         </script>
